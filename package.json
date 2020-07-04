@@ -1,0 +1,22 @@
+{
+  "name": "poke-app",
+  "version": "0.1.0",
+  "description": "This is a practice app, based on poke-api",
+  "author": "Gilberto Suarez <gilbertosuarez@uricao.com> (https://gilbertosuarez.com)",
+  "homepage": "",
+  "repository": "",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "next": "9.4.4",
+    "node-sass": "^4.14.1",
+    "poetic": "^1.5.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  }
+}
