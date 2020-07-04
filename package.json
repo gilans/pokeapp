@@ -4,7 +4,7 @@
   "description": "This is a practice app, based on poke-api",
   "author": "Gilberto Suarez <gilbertosuarez@uricao.com> (https://gilbertosuarez.com)",
   "homepage": "",
-  "repository": "",
+  "repository": "https://github.com/gilans/pokeapp.git",
   "private": true,
   "scripts": {
     "dev": "next dev",
