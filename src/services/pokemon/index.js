@@ -8,5 +8,10 @@ function fetchAllPokemons() {
   });
 }
 
-// eslint-disable-next-line import/prefer-default-export
 export { fetchAllPokemons };
+
+const pokemonService = {
+  fetchAllPokemons,
+};
+
+export default pokemonService;
