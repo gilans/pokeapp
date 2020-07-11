@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 // next.config.js
-const withSass = require("@zeit/next-sass");
+const debug = process.env.NODE_ENV !== "production";
 
-module.exports = withSass();
+module.exports = {
+  assetPrefix: !debug ? "/pokeapp/" : "",
+};
