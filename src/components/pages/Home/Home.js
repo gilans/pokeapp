@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import "./Home.scss";
 import { fetchAllPokemons } from "services/pokemon";
+import styles from "./Home.module.scss";
 import HomeCarousel from "./HomeCarousel";
 
 function Home() {
@@ -16,7 +16,7 @@ function Home() {
   const keepLoading = pokemons.length === 0;
 
   return (
-    <main className="home__container">
+    <main className={styles.home__container}>
       <h1>Pokemon App</h1>
       {!keepLoading && <HomeCarousel pokemons={pokemons} />}
       {keepLoading && <div>Loading ...</div>}
