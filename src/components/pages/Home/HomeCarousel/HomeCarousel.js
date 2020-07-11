@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { getPokemons } from "utils/pokemon";
 
-import "./HomeCarousel.scss";
+import styles from "./HomeCarousel.module.scss";
 
 HomeCarousel.propTypes = {};
 
@@ -17,10 +17,15 @@ function HomeCarousel({ pokemons }) {
     <section>
       {pokemonList.map((pokemon) => {
         return (
-          <div className="home-carousel__card-container" key={pokemon.id}>
-            <p className="home-carousel__image-title">{pokemon.name}</p>
+          <div
+            className={styles["home-carousel__card-container"]}
+            key={pokemon.id}
+          >
+            <p className={styles["home-carousel__image-title"]}>
+              {pokemon.name}
+            </p>
             <img
-              className="home-carousel__image"
+              className={styles["home-carousel__image"]}
               src={pokemon.imageUrl}
               alt={pokemon.name}
             />
