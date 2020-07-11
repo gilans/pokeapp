@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+
+import Slider from "react-slick";
+
 import { getPokemons } from "utils/pokemon";
 
 import styles from "./Carousel.module.scss";
+import Slide from "../Slide";
 
 Carousel.propTypes = {};
 
@@ -13,20 +17,23 @@ function Carousel({ pokemons }) {
     setPokemonList(getPokemons(pokemons));
   }, [pokemons]);
 
+  const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 3,
+    speed: 500,
+    dots: true,
+  };
+
   return (
-    <section>
-      {pokemonList.map((pokemon) => {
-        return (
-          <div className={styles["carousel__card-container"]} key={pokemon.id}>
-            <p className={styles["carousel__image-title"]}>{pokemon.name}</p>
-            <img
-              className={styles.carousel__image}
-              src={pokemon.imageUrl}
-              alt={pokemon.name}
-            />
-          </div>
-        );
-      })}
+    <section className={styles.carousel__container}>
+      <Slider {...settings}>
+        {pokemonList.map((pokemon) => (
+          <Slide pokemon={pokemon} />
+        ))}
+      </Slider>
     </section>
   );
 }
