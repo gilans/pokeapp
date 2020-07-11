@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 import { fetchAllPokemons } from "services/pokemon";
+import Carousel from "components/presentational/Carousel";
 import styles from "./Home.module.scss";
-import Carousel from "./Carousel";
 
 function Home() {
   const [pokemons, setPokemons] = useState([]);

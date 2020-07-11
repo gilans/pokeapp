@@ -3,8 +3,8 @@ import { shallow } from "enzyme";
 
 // eslint-disable-next-line no-unused-vars
 import MockedPokemonService from "services/pokemon";
+import Carousel from "components/presentational/Carousel";
 import Home from "./Home";
-import Carousel from "./Carousel";
 
 jest.mock("services/pokemon", () => {
   return {
