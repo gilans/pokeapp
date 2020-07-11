@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { getPokemons } from "utils/pokemon";
 
-import styles from "./HomeCarousel.module.scss";
+import styles from "./Carousel.module.scss";
 
-HomeCarousel.propTypes = {};
+Carousel.propTypes = {};
 
-function HomeCarousel({ pokemons }) {
+function Carousel({ pokemons }) {
   const [pokemonList, setPokemonList] = useState([]);
 
   React.useEffect(() => {
@@ -17,15 +17,10 @@ function HomeCarousel({ pokemons }) {
     <section>
       {pokemonList.map((pokemon) => {
         return (
-          <div
-            className={styles["home-carousel__card-container"]}
-            key={pokemon.id}
-          >
-            <p className={styles["home-carousel__image-title"]}>
-              {pokemon.name}
-            </p>
+          <div className={styles["carousel__card-container"]} key={pokemon.id}>
+            <p className={styles["carousel__image-title"]}>{pokemon.name}</p>
             <img
-              className={styles["home-carousel__image"]}
+              className={styles.carousel__image}
               src={pokemon.imageUrl}
               alt={pokemon.name}
             />
@@ -36,4 +31,4 @@ function HomeCarousel({ pokemons }) {
   );
 }
 
-export default HomeCarousel;
+export default Carousel;

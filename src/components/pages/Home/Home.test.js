@@ -4,7 +4,7 @@ import { shallow } from "enzyme";
 // eslint-disable-next-line no-unused-vars
 import MockedPokemonService from "services/pokemon";
 import Home from "./Home";
-import HomeCarousel from "./HomeCarousel";
+import Carousel from "./Carousel";
 
 jest.mock("services/pokemon", () => {
   return {
@@ -32,7 +32,7 @@ describe("Home", () => {
     expect(wrapper.find("main").length).toBe(1);
   });
 
-  it("Should render a HomeCarousel component", () => {
-    expect(wrapper.find(HomeCarousel).length).toBe(1);
+  it("Should render a Carousel component", () => {
+    expect(wrapper.find(Carousel).length).toBe(1);
   });
 });

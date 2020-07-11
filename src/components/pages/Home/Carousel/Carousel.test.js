@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import { POKE_IMAGE_API } from "utils/constants";
 import MockedPokemonService from "utils/pokemon";
-import HomeCarousel from "./HomeCarousel";
+import Carousel from "./Carousel";
 
 // eslint-disable-next-line no-unused-vars
 
@@ -19,7 +19,7 @@ jest.mock("utils/pokemon", () => {
   };
 });
 
-describe("HomeCarousel", () => {
+describe("Carousel", () => {
   let wrapper;
   let useEffect;
 
@@ -37,7 +37,7 @@ describe("HomeCarousel", () => {
     mockUseEffect();
     mockUseEffect();
 
-    wrapper = shallow(<HomeCarousel pokemons={pokemons} />);
+    wrapper = shallow(<Carousel pokemons={pokemons} />);
   });
 
   it("should render without crashing", () => {
