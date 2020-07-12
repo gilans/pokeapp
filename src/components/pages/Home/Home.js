@@ -20,6 +20,21 @@ function Home() {
       <h1>Pokemon App</h1>
       {!keepLoading && <Carousel pokemons={pokemons} />}
       {keepLoading && <div>Loading ...</div>}
+      <footer className={styles.home__footer}>
+        <div>
+          Iconos diseñados por{" "}
+          <a
+            href="https://www.flaticon.es/autores/gregor-cresnar"
+            title="Gregor Cresnar"
+          >
+            Gregor Cresnar
+          </a>{" "}
+          from{" "}
+          <a href="https://www.flaticon.es/" title="Flaticon">
+            www.flaticon.es
+          </a>
+        </div>
+      </footer>
     </main>
   );
 }
