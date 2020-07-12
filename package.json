@@ -19,6 +19,7 @@
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "axios": "^0.19.2",
+    "classnames": "^2.2.6",
     "next": "9.4.4",
     "poetic": "^1.5.0",
     "react": "16.13.1",
@@ -29,12 +30,14 @@
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
+    "@svgr/webpack": "^5.4.0",
     "babel-jest": "^26.1.0",
     "babel-plugin-transform-define": "^2.0.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.5.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^26.1.0"
+    "jest": "^26.1.0",
+    "url-loader": "^4.1.0"
   }
 }
